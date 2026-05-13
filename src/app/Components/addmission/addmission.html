@@ -1,0 +1,73 @@
+<!-- Admission Form -->
+<div class="container mt-4">
+  <div class="card shadow p-4">
+
+    <a routerLink="/" class="fs-4 underline-none"> ← Home</a>
+
+    <h2 class="text-center mb-4 text-primary">Admission Form</h2>
+
+    <form>
+
+     
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" #name class="form-control" placeholder="Enter Name">
+        <small class="text-danger" *ngIf="nameError">{{nameError}}</small>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" #email class="form-control" placeholder="Enter Email">
+        <small class="text-danger" *ngIf="emailError">{{emailError}}</small>
+      </div>
+
+     
+      <div class="mb-3">
+        <label class="form-label">Gender</label><br>
+
+        <input type="radio" name="gender" value="Male" (change)="gender='Male'"> Male
+        <input type="radio" name="gender" value="Female" class="ms-3" (change)="gender='Female'"> Female
+
+        <small class="text-danger" *ngIf="genderError">{{genderError}}</small>
+      </div>
+
+      
+      <div class="mb-3">
+        <label class="form-label">Course</label>
+        <select #course class="form-select">
+          <option value="">Select Course</option>
+          <option value="BCA">BCA</option>
+          <option value="BTech">BTech</option>
+          <option value="MBA">MBA</option>
+        </select>
+        <small class="text-danger" *ngIf="courseError">{{courseError}}</small>
+      </div>
+
+      
+      <div class="mb-3">
+        <label class="form-label">Hobbies</label><br>
+
+        <input type="checkbox" value="Reading"> Reading
+        <input type="checkbox" value="Sports" class="ms-3"> Sports
+        <input type="checkbox" value="Music" class="ms-3"> Music
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea #address class="form-control" rows="3"></textarea>
+        <small class="text-danger" *ngIf="addressError">{{addressError}}</small>
+      </div>
+
+
+      <button type="button" class="btn btn-primary w-100"
+        (click)="userDataValidation(name.value, email.value, course.value, address.value)">
+        Submit Admission
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>

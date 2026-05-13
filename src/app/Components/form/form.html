@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row shadow rounded overflow-hidden bg-white">
+        <div class="col-12 col-md-6 p-0">
+            <div class="image-side h-100"></div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center p-4">
+            <form class="w-100">
+                <h2 class="text-center mb-4">Login Form</h2>
+                <div class="mb-3">
+                    <input type="email" #email class="form-control" placeholder="Enter Email">
+                    <small class="text-danger" *ngIf="emailError">
+                        {{ emailError }}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <input type="password" #password class="form-control" placeholder="Enter Password">
+
+                    <small class="text-danger" *ngIf="passwordError">
+                        {{ passwordError }}
+                    </small>
+                </div>
+                <button type="button" class="btn btn-primary w-100" (click)="validate(email.value, password.value)">
+
+                    Submit
+
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
