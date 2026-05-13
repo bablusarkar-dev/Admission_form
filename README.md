@@ -1,4 +1,5 @@
 # AdmissionForm
+<img width="1198" height="543" alt="image" src="https://github.com/user-attachments/assets/d6a6a9ff-697f-4a7a-9089-acebe527bc89" />
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.10.
 
