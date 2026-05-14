@@ -22,5 +22,5 @@ export class Home {
   //   this.router.navigate(['/about'])
   // }
 
-  val:number=Math.floor(Math.random()*10)
+  // val:number=Math.floor(Math.random()*10)
 }

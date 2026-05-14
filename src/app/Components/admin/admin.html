@@ -1,0 +1,55 @@
+<!-- <a routerLink="/">Go to Home</a> -->
+
+
+<div class="card">
+    <div class="card-header">
+        Add Courses
+    </div>
+    <form action="" #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Ttile </label>
+                <input type="text" class="form-control" id="title" name="title" #title="ngModel"
+                    [(ngModel)]="model.title" placeholder="Enter Title .." required="">
+                @if(title.invalid && title.touched){
+                <span class="text-danger">
+                    Description is required.
+                </span>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control" rows="3" placeholder="Enter Description..." id="description"
+                    name="description" #description="ngModel" [(ngModel)]="model.description" required=""></textarea>
+                @if(description.invalid && description.touched){
+                <span class="text-danger">Description is required</span>
+
+                }
+            </div>
+
+            <div class="mb-4">
+                <label for="image"> Choose an Image.</label>
+                <input type="file" #image="ngModel" id="image" name="image" accept="image/*"
+                    (change)="onFileSelected($event)" ngModel required="true" [multiple]="false">
+                @if(image.invalid && image.touched){
+                    <span class="text-danger">Image is required</span>
+                 }
+
+
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-75">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div>
+        @if(cover){
+        <div class="col-xl-6 col-sm-6 col-12 text-center ">
+            <img [src]="cover" alt="">
+
+        </div>
+        }
+    </div>
+</div>

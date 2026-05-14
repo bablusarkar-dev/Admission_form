@@ -9,7 +9,7 @@ export const routes: Routes = [
   // { path: '', redirectTo:'home',pathMatch:'full' },
 
   // {path:'', component:Home},
-  // {path:'about/:id', component:About},
+  // {path:'about', component:About},
 
   // {path:'login', component:Form},
   // { path: 'addmission', component: Addmission },
@@ -20,8 +20,11 @@ export const routes: Routes = [
     path:'',
     loadComponent:()=>import('./Components/home/home').then((c)=>c.Home)
   },{
-    path:'about/:id',
+    path:'about',
     loadComponent:()=>import('./Components/about/about').then((c)=>c.About)
+  },{
+    path:'admin',
+    loadComponent:()=>import('./Components/admin/admin').then((c)=>c.Admin)
   }
 
 ];

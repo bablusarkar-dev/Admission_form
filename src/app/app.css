@@ -3,3 +3,13 @@
     border-bottom: 2px solid rgb(21, 37, 61);
 
 }
+
+.KBSgroup{
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav{
+    background-color: rgb(141, 240, 215);
+    color: #fff;
+}
