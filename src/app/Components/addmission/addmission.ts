@@ -15,7 +15,6 @@ export class Addmission {
   genderError = ''
   courseError = ''
   addressError = ''
-
   gender = ''
 
   userDataValidation(
