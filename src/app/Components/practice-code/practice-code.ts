@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-practice-code',
@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './practice-code.html',
   styleUrl: './practice-code.css',
 })
-export class PracticeCode {}
+export class PracticeCode implements OnInit {
+  ngOnInit(): void {
+    console.log("Oninit is workig in home components!")
+  }
+}
